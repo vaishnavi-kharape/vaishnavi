@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            height: 10vh;
+            width: 100vw;
+            background-color: black;
+        }
+
+        nav {
+            height: 20vh;
+            width: 100vw;
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            border: none;
+            gap: 10px;
+            font-size: 20px;
+            position: fixed;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-size: 50px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        i {
+            padding-left: 10px;
+
+        }
+
+        main {
+            height: 120vh;
+            width: 100vw;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 70px;
+            background-image: url('https://loseweightbyeating.com/wp-content/uploads/2021/01/Screen-Shot-2021-01-06-at-9.41.57-AM.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-size: 100% 100%;
+        }
+
+        main h1 {
+            font-size: 60px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: white;
+
+        }
+
+        main button {
+            height: 50px;
+            width: 180px;
+            border-radius: 10px;
+            background-color: rgb(236, 174, 58);
+            border: none;
+        }
+
+        section {
+            height: 10vh;
+            width: 100vw;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 80px;
+            padding-left: 50px;
+        }
+
+        .first {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+            border: none;
+            padding-left: 30px;
+            padding-right: 40px;
+
+        }
+
+        .first div {
+            height: 80vh;
+            width: 50vw;
+            gap: 20px;
+            border-radius: 2px;
+
+        }
+
+        .one {
+            background-image: url('https://www.hotpankitchen.com/wp-content/uploads/2021/09/pumpkin-sweet-potato-soup-2-683x1024.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        .two {
+            background-image: url('https://cdn2.foodviva.com/static-content/food-images/snacks-recipes/bread-cutlet-recipe/bread-cutlet-recipe.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .three {
+            background-image: url('https://img.sndimg.com/food/image/upload/q_92,fl_progressive/v1/img/recipes/20/56/YC6ccuORQHSH4Gwjslqt_Acorn1%20(1%20of%201).jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        .first div h1 {
+            font-size: 40px;
+            color: black;
+
+        }
+
+        .second {
+            height: 10vh;
+            width: 100vw;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 40px;
+            padding-left: 50px;
+        }
+
+        .more {
+            height: 50vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+            /* border: none; */
+            padding-left: 30px;
+            padding-right: 40px;
+
+        }
+
+        .more div {
+            height: 30vh;
+            width: 100vw;
+            /* border: 2px solid black; */
+            gap: 20px;
+            border-radius: 120px;
+
+        }
+
+        .more div h1 {
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+
+        }
+
+        .a {
+            background-image: url('https://images.immediate.co.uk/production/volatile/sites/30/2022/09/Chicken-Stroganoff-06462c0.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            align-content: flex-end;
+        }
+
+        .b {
+            background-image: url('https://www.milkmaid.in/sites/default/files/2022-12/Chocolate-Ice-Cream-335x300.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            align-content: flex-end;
+        }
+
+        .c {
+            background-image: url('https://images.immediate.co.uk/production/volatile/sites/30/2020/08/american-pancakes-5fc705c.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            align-content: flex-end;
+        }
+
+        .d {
+            background-image: url('https://thebusybaker.ca/wp-content/uploads/2018/08/vanilla-bean-angel-food-cake-trifles-fbig1-750x750.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            align-content: flex-end;
+
+        }
+
+        .e {
+            background-image: url('https://www.thespruceeats.com/thmb/cQD_JvUOD_OzgrQkF0cUiqobkyE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vegetarian-bean-and-rice-burrito-recipe-3378550-9_preview-5b2417e1ff1b780037a58cda.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            align-content: flex-end;
+
+        }
+
+        .f {
+            background-image: url('https://mybartender.com/wp-content/uploads/2024/10/Red-Witch-Mocktail.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            align-content: flex-end;
+
+
+        }
+
+        .a h1 {
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+        }
+
+        .third {
+            height: 10vh;
+            width: 100vw;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 40px;
+            padding-left: 50px;
+
+        }
+
+        .miss {
+            height: 100vh;
+            width: 100vw;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+            border: none;
+            padding-left: 30px;
+            padding-right: 40px;
+
+        }
+
+        .miss div {
+            height: 80vh;
+            width: 50vw;
+            /* border: 2px solid black; */
+            gap: 20px;
+            border-radius: 2px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            border-radius: 10px;
+
+        }
+
+        .miss_one {
+            background-image: url('https://5.imimg.com/data5/SELLER/Default/2024/4/414845519/RI/NC/PJ/39612703/soya-nutrela-momos.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .miss_two {
+            background-image: url('https://images.themodernproper.com/billowy-turkey/production/posts/2021/Homemade-Mozzarella-Sticks-9.jpeg?w=1200&q=82&auto=format&fit=crop&dm=1638935116&s=3c6cab3baf5e73086e1c0705b6d92ea3');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        .miss_three {
+            background-image: url('https://i.pinimg.com/736x/1a/68/0b/1a680b439687d04c07ba96c3ce6b705f.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .miss h1 {
+            color: white;
+        }
+
+        .trend {
+            height: 100vh;
+            width: 100vw;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            padding-left: 30px;
+            padding-right: 40px;
+
+        }
+
+        .trend div {
+            height: 90%;
+            width: 60%;
+            gap: 20px;
+            border-radius: 2px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            border-radius: 10px;
+
+        }
+
+        .trend_one {
+            background-image: url('https://i.pinimg.com/736x/41/c0/87/41c087240f6a29fcfe9f1ba278dd4b08.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .trend_two {
+            background-image: url('https://laurenfromscratch.com/wp-content/uploads/2023/04/A-bowl-of-tender-pot-roast-with-fresh-herbs-carrots-and-potatoes..jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .trend_three {
+            background-image: url('https://natashaskitchen.com/wp-content/uploads/2020/10/Dutch-Apple-Time-6.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .trend_four {
+            background-image: url('https://www.forkintheroad.co/wp-content/uploads/2022/10/roasted-butternut-squash-shallots-115.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .trend h1 {
+            color: white;
+        }
+
+        .four {
+            height: 50vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 50px;
+        }
+
+        .four input {
+            height: 30%;
+            width: 80%;
+            border-radius: 20px;
+            padding-left: 30px;
+
+        }
+
+        .four button {
+            height: 30%;
+            width: 40%;
+            background-color: rgb(233, 180, 81);
+            border-radius: 10px;
+            border: none;
+
+        }
+
+        footer {
+            height: 20vh;
+            width: 100vw;
+            background-color: rgb(66, 64, 64);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 30px;
+            padding-left: 50px;
+        }
+
+        .five {
+            height: 20vh;
+            width: 100vw;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 40px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>food</h1>
+            <a href="">RECIPES</a>
+            <a href="">POPULAR</a>
+            <a href="">MEAT & SEAFOOD</a>
+            <a href="">HEALTHY & DIAT</a>
+            <a href="">HOLIDAYS</a>
+            <a href="">CUISINE</a>
+            <a href="">SEASONAL</a>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-bookmark"></i>
+            <i class="fa-regular fa-user"></i>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1>42 QUICK & EASY FALL DINNERS</h1>
+            <button>SEE THEM ALL</button>
+        </div>
+
+
+    </main>
+    <section>
+        <h1>WHAT WE'RE CRAVING</h1>
+    </section>
+    <section class="first">
+
+        <div class="one">
+            <h1>SWEET & SAVORY PUMPAKIN RECIPES</h1>
+
+        </div>
+        <div class="two">
+            <h1>CREATIVE POTATO RECIPES</h1>
+
+        </div>
+        <div class="three">
+            <h1>SEASONAL EATS:SQUASH</h1>
+
+        </div>
+    </section>
+    <section class="second">
+        <h1>EXPLORE MORE</h1>
+    </section>
+    <section class="more">
+        <div class="a">
+            <h1>COMFORT FOOD</h1>
+        </div>
+        <div class="b">
+            <h1>ICE-CREAM</h1>
+
+        </div>
+        <div class="c">
+            <h1>PANCAKES</h1>
+
+        </div>
+        <div class="d">
+            <h1>FRUTIS</h1>
+
+        </div>
+        <div class="e">
+            <h1>QUICK & EASY</h1>
+
+        </div>
+        <div class="f">
+            <h1>COPYCAT</h1>
+
+        </div>
+
+    </section>
+    <section class="third">
+        <h1>DON'T MISS</h1>
+    </section>
+    <section class="miss">
+
+        <div class="miss_one">
+            <h1>MOMOS</h1>
+        </div>
+        <div class="miss_two">
+            <h1>MOZZARELLA STICKS</h1>
+        </div>
+        <div class="miss_three">
+            <h1>DONUTS</h1>
+
+        </div>
+    </section>
+    <section class="five">
+        <h1>TRENDING NOW</h1>
+    </section>
+    <section class="trend">
+        <div class="trend_one">
+            <h1>SPICED PUMPKIN WAFFLES</h1>
+
+        </div>
+
+        <div class="trend_two">
+            <h1>TENDER POT ROAST</h1>
+
+        </div>
+        <div class="trend_three">
+            <h1>EASY DUTCH APPLE PIE</h1>
+
+        </div>
+        <div class="trend_four">
+            <h1>ROASTED BUTTERNUT SQUASH</h1>
+
+        </div>
+
+    </section>
+    <section class="four">
+        <h1>FIND MORE RECIPES</h1>
+        <input type="text" placeholder="I'm craving">
+        <button>SEARCH</button>
+    </section>
+    <footer>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-regular fa-envelope"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-solid fa-arrow-up"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <h5>Back to top</h5>
+        <h3>The Discovery Family of Networks</h3>
+        <br>
+        <h3>Advertise,
+            AdChoices,
+            Privacy Policy,
+            Visitor Agreement,
+            California Privacy Policy,
+        </h3>
+
+    </footer>
+
+</body>
+
+</html>
